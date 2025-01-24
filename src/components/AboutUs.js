@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Rocket, Star, Mail, Linkedin, Github } from 'lucide-react';
 
 const AboutUs = () => {
@@ -251,22 +252,22 @@ const AboutUs = () => {
                       {/* Social Links */}
                       <div className="flex space-x-4">
                         {member.linkedin && (
-                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
+                          <Link to={member.linkedin} target="_blank" rel="noopener noreferrer"
                             className="text-gray-400 hover:text-blue-400 transition-colors">
                             <Linkedin size={20} />
-                          </a>
+                          </Link>
                         )}
                         {member.email && (
-                          <a href={getmaillink(member.email)} target="_blank" rel="noopener noreferrer"
+                          <Link to={getmaillink(member.email)} target="_blank" rel="noopener noreferrer"
                             className="text-gray-400 hover:text-blue-400 transition-colors">
                             <Mail size={20} />
-                          </a>
+                          </Link>
                         )}
                         {member.github && (
-                          <a href={member.github} target="_blank" rel="noopener noreferrer"
+                          <Link to={member.github} target="_blank" rel="noopener noreferrer"
                             className="text-gray-400 hover:text-blue-400 transition-colors">
                             <Github size={20} />
-                          </a>
+                          </Link>
                         )}
                       </div>
                     </div>
